@@ -7,12 +7,12 @@
         {
             "type": "node",
             "request": "launch",
-            "name": "Launch Program",
+            "name": "Chart Server Launch",
             "skipFiles": [
                 "<node_internals>/**"
             ],
             "cwd": "${workspaceFolder}/Server/node/",
-            "program": "${workspaceFolder}/Server/node/"
+            "program": "$cwd npm start"
         }
     ]
 }
