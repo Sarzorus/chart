@@ -3,3 +3,6 @@
 
 # Ignore installed node modules
 /Server/node/node_modules/
+
+# Ignore vs code launch options as they are editor specific
+/.vscode/
