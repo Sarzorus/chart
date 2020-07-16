@@ -14,4 +14,6 @@ var trace1 = {
   
   var data = [trace1, trace2];
   
-  Plotly.newPlot('myDiv', data);
+  chart = document.getElementById("chart")
+
+  Plotly.newPlot(chart, data);
