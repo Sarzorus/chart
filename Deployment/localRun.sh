@@ -7,3 +7,4 @@ cd Server/node
 #TODO: check for npm
 npm install
 npm start
+start chrome.exe http://localhost:3000/
