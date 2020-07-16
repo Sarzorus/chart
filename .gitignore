@@ -1,0 +1,5 @@
+# Ignore npm's package lock so packages will update properly on testing and deployments
+/Server/node/package-lock.json
+
+# Ignore installed node modules
+/Server/node/node_modules/
