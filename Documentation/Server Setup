@@ -1,0 +1,51 @@
+The server is runing Ubuntu 20.04 LTS and was installed on GCloud
+The test server is a simply a compute instance, but if you prefer you can run this in a container.
+
+The server is setup with NGINX so that www.aiogames.com/chart will access the node application.
+This allows NGINX to handle the certificate (allowing https)
+
+It is suggested to setup a sudo user with a certificate for logging in to make remote access easier.
+
+First we install nginx
+
+$ sudo apt install nginx
+
+Then on following the lets-encrypt guide we setup CertBot
+see  https://certbot.eff.org/lets-encrypt/ubuntufocal-nginx
+
+Setup to only allow https for security.
+
+Finally we setup the http redirect:
+
+$ cd /etc/nginx/servers_enabled
+# Use whatever editor you prefer.
+$ vim default
+
+In the server section for ssl under the "location /" block 
+add the following.
+
+    #Section to enable node application chart on port 3000 
+    location /chart {
+            proxy_pass http://localhost:3000/; #The trailing / matters it node run as if called from / instead of /chart
+    }
+
+Install dependencies ass seen below. 
+
+$ sudo apt install git
+$ sudo apt install node
+$ sudo apt install npm
+
+Setup deploy keys for github if you have pulled this project and made it private. 
+Or if you want to.
+
+In a directory of your choosing, (I use ~/)
+git clone git@github.com:Sarzorus/chart.git
+
+Finally you may start and test the application 
+Restart nginx if you haven't already since the changes.
+$ sudo systemctl reload nginx
+
+start the application in the background. 
+$ cd chart
+$ chmod +x Deployment/localRun.sh
+$ ./Deployment/localRun.sh &
