@@ -10,7 +10,7 @@ class GraphFunction{
     // range is a numerical value representing the height from the y value the graph renders
     // domain is a numerical value representing the length from the x value the graph renders
     // singleVariableFunction is a function that will return an y value for a given x value.
-    GraphFunction(lowerXBound, lowerYBound, range, domain,  singleVariableFunction){
+    constructor(lowerXBound, lowerYBound, range, domain,  singleVariableFunction){
         //The following variables are the graphs limit and should always be numerical
         this.lowerXBound = lowerXBound;
         this.lowerYBound = lowerYBound;
@@ -33,7 +33,7 @@ class GraphFunction{
         let upperXBound = this.lowerXBound + this.domain;
 
         //Populate x and y arrays for the scatter plot object
-        for(let x = this.lowerXBound; x < this.upperXBound; x = x + increment ){
+        for(let x = this.lowerXBound; x < upperXBound; x = x + increment ){
             xData.push(x);
             yData.push(this.mathFunction(x));
         }

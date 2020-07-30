@@ -2,7 +2,7 @@
 //Later make it update a plot ectera.
 class Graph{
 
-  //Creates a 
+  //Creates a graph with no parameters
   constructor(){
 
     //Currently initializes two traces one as example data one as an example function.
