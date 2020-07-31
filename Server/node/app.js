@@ -4,6 +4,7 @@ const app = express();
 const port = 3000;
 
 app.get('/', (req, res) => res.redirect('/main.html'));
+app.get('', (req, res) => res.redirect('/main.html'));
 
 app.use(express.static(path.join(__dirname, '../../Client/html')));
 app.use(express.static(path.join(__dirname, '../../Client/css')));
