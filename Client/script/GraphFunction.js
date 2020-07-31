@@ -41,7 +41,8 @@ class GraphFunction{
         let trace = {
             x: xData,
             y: yData,
-            type: 'scatter'
+            type: 'scatter',
+            name: 'f(x) = x^2'
           };
 
         return trace;

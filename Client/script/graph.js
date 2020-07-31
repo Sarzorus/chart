@@ -6,13 +6,14 @@ class Graph{
   constructor(){
 
     //Currently initializes two traces one as example data one as an example function.
-    let graphFunction = new GraphFunction(0,0,10,10, function(x){return x});
+    let graphFunction = new GraphFunction(0,0,10,10, function(x){return x*x});
     let trace1 = graphFunction.getPlotDataForIncrement(0.2); 
     
     var trace2 = {
       x: [1, 2, 3, 4],
       y: [16, 5, 11, 9],
-      type: 'scatter'
+      type: 'scatter',
+      name: 'Generic Dataset'
     };
     
     var data = [trace1, trace2];
