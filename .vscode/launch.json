@@ -12,7 +12,7 @@
                 "<node_internals>/**"
             ],
             "cwd": "${workspaceFolder}/Server/node/",
-            "program": "$cwd npm start"
+            "program": "app.js"
         }
     ]
 }
