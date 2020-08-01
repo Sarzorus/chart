@@ -5,6 +5,8 @@ This charting application is hosted at https://aiogames.com/chart/
 
 The source code includes both server and client side code as well as deployment scripts and documentation.
 
+This project is a portfolio piece. For Javascript coding stlye see client/script directory. 
+
 ## Charts Development is planned as follows
 
 1. Display time series data and mathematical functions on the same chart.
