@@ -1,6 +1,8 @@
 # Chart
 An application for charting both functions and data.
-This charting application is hosted at aiogames.com/chart/
+
+This charting application is hosted at https://aiogames.com/chart/
+
 The source code includes both server and client side code as well as deployment scripts and documentation.
 
 ## Charts Development is planned as follows
