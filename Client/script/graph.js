@@ -24,6 +24,4 @@ class Graph{
     this.graph2D = Plotly.newPlot(chart, data);
   }
 
-
-
 };
