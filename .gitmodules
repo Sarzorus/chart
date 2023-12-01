@@ -1,0 +1,4 @@
+[submodule "Wiki"]
+	path = Wiki
+	url = ./Wiki
+	branch = git@github.com:Sarzorus/chart.wiki.git
