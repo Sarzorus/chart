@@ -2,7 +2,7 @@
 function getEven(data) {
     let evenData = [];
     for (let i = 0; i < data.length; i++){
-        if (i%2){
+        if (i%2 == 0){
             evenData.push(data[i]);
         }
     }
@@ -12,7 +12,7 @@ function getEven(data) {
 function getOdd(data){
     let oddData = [];
     for (let i = 0; i < data.length; i++){
-        if (i%2 != 0){
+        if (i%2){
             oddData.push(data[i]);
         }
     }
@@ -27,11 +27,6 @@ class dataset {
     //TODO: Allow for user updates to parameters.
     constructor(){
   
-        const query_values = new URLSearchParams(window.location.search);
-        //Initialize a function example.
-        let dataset_name = query_values.get("dataset-name");
-        let  data = query_values.get("data").split(',');
-        
         this.tracey = {
             x: [1, 2, 3, 4],
             y: [16, 5, 11, 9],
@@ -39,7 +34,13 @@ class dataset {
             name: 'generic data'
         };
 
+        const query_values = new URLSearchParams(window.location.search);
+        //Initialize a function example.
+        let dataset_name = query_values.get("dataset-name");
         if(dataset_name){
+
+        let  data = query_values.get("data").split(',');
+
             this.tracey = {
                 x: getEven(data),
                 y: getOdd(data),
