@@ -11,12 +11,8 @@ class Graph{
     let trace1 = graphFunction.getPlotDataForIncrement(0.2); 
     
     //Initialize a dataset example.
-    var trace2 = {
-      x: [1, 2, 3, 4],
-      y: [16, 5, 11, 9],
-      type: 'scatter',
-      name: 'Generic Dataset'
-    };
+    let query_data = new dataset();
+    let trace2 = query_data.trace;
 
     var data = [trace1, trace2];
 

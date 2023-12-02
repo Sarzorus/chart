@@ -18,9 +18,16 @@
             <p>
                 Chart plots both Mathmatical functions and data on a plotly js graph.  
             </p>
-            <button>Upload Data</button>
+            <form action="">
+                <label for="dataset">Dataset Name:</label><br>
+                <input type="text" id="dataset" name="dataset-name"><br>
+                <label for="data">Two Dimensional Dataset:</label><br>
+                <textarea id="data" name="data" rows="20" cols="120"></textarea><br>
+                <button>Upload Data</button>
+            <form>
         <!-- Scripts that runs after the DOM elements are populated -->
         <!-- TODO: use onload instead -->
+        <script src="dataset.js"></script>
         <script src="GraphFunction.js"></script>
         <script src="graph.js"></script>
         <script src="main.js"></script>

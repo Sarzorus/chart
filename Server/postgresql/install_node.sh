@@ -1,7 +1,6 @@
-# Install can be found at https://deb.nodesource.com/setup_21.3.0
-# You can check the latest version number at https://nodejs.org/en
-sudo apt-get update && sudo apt-get install -y ca-certificates curl gnupg
-curl -fsSL https://deb.nodesource.com/gpgkey/nodesource-repo.gpg.key | sudo gpg --dearmor -o /etc/apt/keyrings/nodesource.gpg
-NODE_MAJOR=21
-echo "deb [signed-by=/etc/apt/keyrings/nodesource.gpg] https://deb.nodesource.com/node_$NODE_MAJOR.x nodistro main" | sudo tee /etc/apt/sources.list.d/nodesource.list
-sudo apt-get update && sudo apt-get install nodejs -y
+# We are just installing NVM using the method on the github https://github.com/nvm-sh/nvm
+# and then installing the correct version. 
+# At the time of writing the latest version is 21.3.0 
+
+wget -qO- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
+nvm install node 21.3.0
